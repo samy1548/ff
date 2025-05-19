@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muebles - Mueblería El Mayor</title>
+    <link rel="stylesheet" href="./css/productos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="muebles.html">Muebles</a></li>
+                <li><a href="habitacion.html">Habitacion</a></li>
+                <li><a href="estantes.html">Estantes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+       
+        <h1 id="titulo-llamativo" class="titulo-llamativo" style="text-align: center;">Habitacion</h1>
+          <div class="productos">
+        <div class="producto">
+            <img src="./imagen/habitacion/1.png" alt="Mueble 1" onclick="abrirModal(this)">
+            <h3>Mueble 1</h3>
+            <p>Descripción del mueble 1.</p>
+        </div>
+        <div class="producto">
+            <img src="./imagen/habitacion//2.png" alt="Mueble 2" onclick="abrirModal(this)">
+            <h3>Mueble 2</h3>
+            <p>Descripción del mueble 2.</p>
+        </div>
+        <!-- Más productos aquí -->
+        <div class="producto">
+            <img src="./imagen/habitacion/3.png" alt="Mueble 3" onclick="abrirModal(this)">
+            <h3>Mueble 3</h3>
+            <p>Descripción del mueble 3.</p>
+        </div>
+        <div class="producto">
+            <img src="./imagen/habitacion/4.jpeg" alt="Mueble 4" onclick="abrirModal(this)">
+            <h3>Mueble 4</h3>
+            <p>Descripción del mueble 4.</p>
+        </div>
+        <div class="producto">
+            <img src="./imagen/habitacion/5.png" alt="Mueble 5" onclick="abrirModal(this)">
+            <h3>Mueble 5</h3>
+            <p>Descripción del mueble 5.</p>
+        </div>
+             <div class="producto">
+             <img src="./imagen/habitacion/6.png" alt="Mueble 6" onclick="abrirModal(this)">
+            <h3>Mueble 5</h3>
+            <p>Descripción del mueble 5.</p>
+        </div>
+             <div class="producto">
+             <img src="./imagen/habitacion/7.png" alt="Mueble 7" onclick="abrirModal(this)">
+            <h3>Mueble 5</h3>
+            <p>Descripción del mueble 5.</p>
+        </div>
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Mueblería El Mayor</p>
+    </footer>
+    <div id="modalImagen" class="modal" onclick="cerrarModal()">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="imagenAmpliada">
+    </div>
+    <script src="./java/producto.js"></script>
+</body>
+</html>
