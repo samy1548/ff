@@ -148,3 +148,42 @@ footer {
 .main-content {
   flex: 1; /* Hace que este contenido crezca y empuje el footer hacia abajo */
 }
+
+/* Sección Quiénes Somos */
+.quienes-somos {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quienes-somos h2, 
+.quienes-somos h3 {
+    color: #4A3F35;
+    margin-bottom: 10px;
+}
+
+.quienes-somos p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.quienes-somos hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 30px 0;
+}
+
+.valores-lista {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555;
+}
+
+.valores-lista li {
+    margin-bottom: 10px;
+}
