@@ -22,7 +22,7 @@ function cerrarModal() {
         titulo.style.opacity = '1';
     }
     visible = !visible;
-    }, 1000); // 3 segundos
+    }, 5000); // 3 segundos
 });
 
 
