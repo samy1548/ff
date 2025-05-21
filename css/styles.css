@@ -1,0 +1,251 @@
+:root {
+    --primary-color: #5f5f5fee;
+    --secondary-color: #000000;
+    --background-color: #f7fff7;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* ======== MENÚ ======== */
+
+.menu {
+    display: flex;
+    justify-content: center; /* Centramos los botones */
+    gap: 1rem;               /* Espacio entre botones */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0; /* Eliminamos separación extra */
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px 16px;  /* ↑↓ espacio vertical | ←→ espacio lateral */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Submenú (Otros) */
+.menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-color);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.menu .dropdown li a {
+    display: block;
+    padding: 10px 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.menu .dropdown li a:hover {
+    background-color: var(--secondary-color);
+}
+
+.menu li.submenu:hover .dropdown {
+    display: block;
+}
+
+/* ======== HEADER ======== */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .menu li a {
+        font-size: 14px;
+        padding: 16px 10px;
+    }
+}
+
+/* ======== CARRUSEL ======== */
+main {
+    padding: 2rem;
+}
+
+.carrusel {
+    width: 100%;
+    margin: 2rem auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carrusel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carrusel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.carrusel-buttons button {
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carrusel-buttons button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+button.prev:hover, button.next:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* ======== FOOTER ======== */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.8rem;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* ======== QUIÉNES SOMOS ======== */
+.quienes-somos {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quienes-somos h2,
+.quienes-somos h3 {
+    color: #4A3F35;
+    margin-bottom: 10px;
+}
+
+.quienes-somos p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.quienes-somos hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 30px 0;
+}
+
+.valores-lista {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555;
+}
+
+.valores-lista li {
+    margin-bottom: 10px;
+}
